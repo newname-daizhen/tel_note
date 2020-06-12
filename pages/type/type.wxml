@@ -1,0 +1,30 @@
+<!--pages/type/type.wxml-->
+<view class="type">
+  <view class="type_box">
+    <view class="type_left">
+      <view class="list_type">
+        <block wx:for="{{typeData}}" wx:key="id">
+          <view class="item {{typeIndex==item.id ? 'active':''}}"  bindtap="typeClick" data-index="{{item.id}}">
+            <text class="type_name">{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="type_right">
+      <view class="list_tel">
+        <view class="item" wx:for="{{resultData}}" wx:key="id">
+          <navigator hover-class="none" url="{{item.urls}}">
+            <view class="msg">
+              <view class="name">{{item.title}}</view>
+              <view class="address">{{item.address}}</view>
+            </view>
+            <view class="telnum">
+              <!-- <view class="num">{{item.phone}}</view> -->
+              <image class="btn_call" src="../../static/img/icon_call.png" mode="widthFix"></image>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

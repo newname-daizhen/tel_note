@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/search/search",
+    "pages/detail/detail",
+    "pages/type/type"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3574FA",
+    "navigationBarTitleText": "安搜客",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#BBBFC7",
+    "selectedColor": "#082A72",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/img/tab_home.png",
+        "selectedIconPath": "static/img/tab_home_c.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "static/img/tab_user.png",
+        "selectedIconPath": "static/img/tab_user_c.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,91 @@
+/* pages/detail/detail.wxss */
+.detail {
+  min-height: 100vh;
+  background-color: rgba(153, 153, 153, 0.2);
+}
+
+.bg_white {
+  background-color: #FFF;
+}
+
+.wrap_detail {
+  margin: 0 32rpx;
+  padding: 64rpx 0 40rpx;
+  border-bottom: 2rpx solid #DFDFDF;
+}
+
+.wrap_detail .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #222;
+  line-height: 45rpx;
+}
+
+.wrap_detail .number {
+  margin: 28rpx 0 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrap_detail .number .num {
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #4A4A4A;
+  line-height: 60rpx;
+}
+
+.wrap_detail .number .copy {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #3574FA;
+  line-height: 42rpx;
+}
+
+.wrap_detail .number .icon_copy {
+  margin-right: 4rpx;
+  width: 30rpx;
+}
+
+.wrap_detail .address {
+  display: flex;
+  height: 37rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 37rpx;
+}
+
+.wrap_detail .icon_local {
+  margin-right: 6rpx;
+  width: 23rpx;
+}
+
+.wrap_btn {
+  margin-top: 50rpx;
+  padding: 5rpx 32rpx;
+}
+
+.wrap_btn .btn {
+  margin-top: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #FFF;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #3574FA;
+}
+
+.wrap_btn .btn .icon_call {
+  margin-right: 2rpx;
+  width: 34rpx;
+}
+
+.wrap_btn .btn.blue {
+  color: #FFF;
+  background: linear-gradient(96deg, rgba(45, 112, 255, 1) 0%, rgba(53, 116, 250, 1) 100%);
+  box-shadow: 0px 1px 15px 0px rgba(9, 33, 82, 0.2);
+}

@@ -1,0 +1,28 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+  <view class="bg_white">
+    <view class="wrap_detail">
+      <view class="title">{{telMsg.name}}</view>
+      <view class="number">
+        <view class="num">{{telMsg.tel}}</view>
+        <view class="copy" data-text="{{telMsg.tel}}" bindtap="copyText">
+          <image class="icon_copy" src="../../static/img/icon_copy.png" mode="widthFix"></image>
+          <text>复制号码</text>
+        </view>
+      </view>
+      <view class="address">
+        <image class="icon_local" src="../../static/img/icon_local.png" mode="widthFix"></image>
+        <text>{{telMsg.address}}</text>
+      </view>
+    </view>
+    <view class="wrap_btn">
+      <view class="btn blue" bindtap="callTel">
+        <image class="icon_call" src="../../static/img/icon_call_white.png" mode="widthFix"></image>
+        <text>立即呼叫</text>
+      </view>
+      <view class="btn">
+        <text>收藏到个人</text>
+      </view>
+    </view>
+  </view>
+</view>

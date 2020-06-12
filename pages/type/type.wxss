@@ -1,0 +1,44 @@
+/* pages/type/type.wxss */
+
+.type{
+  height: 100vh;
+  overflow: hidden;
+  background:rgba(153,153,153,0.2);
+}
+
+.type_box{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.type_left,
+.type_right{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.type_left{
+  width: 29.333%;
+  background-color: #F8F8F8;
+}
+.type_right{
+  width: 70.666%;
+}
+
+.list_type{
+  text-align: center;
+  font-size: 28rpx;
+  color: #333;
+  line-height: 110rpx;
+}
+
+.list_type .item{
+  height: 110rpx;
+  box-sizing: border-box;
+}
+.list_type .item.active{
+  background-color: #FFF;
+  color: #2B61FE;
+  border-left: 8rpx solid #2B61FE;
+}

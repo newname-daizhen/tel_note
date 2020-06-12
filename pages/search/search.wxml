@@ -1,0 +1,63 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <view class="wrap_input">
+    <view class="input_block">
+      <image class="icon_search" src="../../static/img/icon_search.png" mode="widthFix"></image>
+      <image class="icon_close" src="../../static/img/icon_close_gray.png" mode="widthFix" wx:if="{{iconClearShow}}" bindtap="searchInputClear"></image>
+      <input class="input" type="text"
+        placeholder="输入号码单位" placeholder-class="plh_style"
+        focus="{{searchInputFocus}}" value="{{searchValue}}"
+        bindinput="closeBtnShow" ></input>
+    </view>
+  </view>
+  <view class="search_result" wx:if="{{!iconClearShow}}">
+    <view class="wrap_hot">
+      <view class="num_hots">
+        <text class="name">号码热搜</text>
+        <text class="info">看看热搜，每周更新</text>
+      </view>
+      <view class="list_hots clearfix">
+        <view class="item">合肥汽车站</view>
+        <view class="item">社保服务中心</view>
+      </view>
+    </view>
+    <view class="recently">
+      <view class="title">
+        <text>最近搜索</text>
+      </view>
+      <view class="list_tel">
+        <view class="item" wx:for="{{resultData}}" wx:key="id">
+          <navigator hover-class="none" url="{{item.urls}}">
+            <view class="msg">
+              <view class="name">{{item.title}}</view>
+              <view class="address">{{item.address}}</view>
+            </view>
+            <view class="telnum">
+              <view class="num">{{item.phone}}</view>
+              <image class="btn_call" src="../../static/img/icon_call.png" mode="widthFix"></image>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="search_result" wx:else>
+    <view class="list_tel" wx:if="{{dataFlag}}">
+      <view class="item" wx:for="{{resultData}}" wx:key="id">
+        <navigator hover-class="none" url="{{item.urls}}">
+          <view class="msg">
+            <view class="name">{{item.title}}</view>
+            <view class="address">{{item.address}}</view>
+          </view>
+          <view class="telnum">
+            <view class="num">{{item.phone}}</view>
+            <image class="btn_call" src="../../static/img/icon_call.png" mode="widthFix"></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+    <view class="data_null" wx:else>
+      暂无数据~
+    </view>
+  </view>
+</view>

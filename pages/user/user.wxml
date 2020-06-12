@@ -1,0 +1,37 @@
+<!--pages/user/user.wxml-->
+<view class="user {{loginNo?'':'gray'}}">
+  <view class="login_box">
+    <view class="avatar">
+      <image src="../../static/img/user_avatar_default.png" mode="widthFix"></image>
+    </view>
+    <view class="info_login_no" wx:if="{{loginNo}}">
+      <text>登录后可以查看收藏哦~</text>
+    </view>
+    <view class="info_login_is" wx:else>
+      <view class="username">沙利阳</view>
+      <view class="usersign">这个人好忙，什么都没有~</view>
+      <view class="login_out">退出登录</view>
+    </view>
+  </view>
+  <view class="line_20"></view>
+  <view class="btn_login" wx:if="{{loginNo}}">
+    <button class="btn" open-type="getUserInfo" bindgetuserinfo="getPerson">
+       <image src="../../static/img/icon_wx_blue.png" mode="widthFix"></image>
+      <text>微信登录</text>
+    </button>
+  </view>
+  <view class="list_func" wx:else>
+    <view class="item">
+      <image src="../../static/img/icon_user_collect.png" mode="widthFix"></image>
+      <text>收藏</text>
+    </view>
+    <view class="item">
+      <image src="../../static/img/icon_user_history.png" mode="widthFix"></image>
+      <text>查询记录</text>
+    </view>
+    <view class="item">
+      <image src="../../static/img/icon_user_edit.png" mode="widthFix"></image>
+      <text>我要报错</text>
+    </view>
+  </view>
+</view>

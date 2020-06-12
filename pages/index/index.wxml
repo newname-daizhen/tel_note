@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="tel_note">
+  <view class="home_top">
+    <view class="img">
+      <image src="../../static/img/img_search.png" mode="widthFix"></image>
+    </view>
+    <view class="text">:-)号码搜一下~</view>
+  </view>
+  <view class="home_search">
+    <navigator hover-class="none" url="../search/search">
+      <image src="../../static/img/icon_search_blue.png" mode="widthFix"></image>
+      <text>输入号码单位</text>
+    </navigator>
+  </view>
+  <view class="list_teltype">
+    <view class="item">
+      <navigator url="../type/type" hover-class="none">
+        <view class="name">
+          <image src="../../static/img/icon_tel_jt.png" mode="widthFix"></image>
+          <text>交通单位</text>
+        </view>
+        <view class="info">#汽车站 #高铁站 #机场</view>
+        <view class="rb_bg"></view>
+      </navigator>
+    </view>
+    <view class="item item-2">
+      <view class="name">
+        <image src="../../static/img/icon_tel_yy.png" mode="widthFix"></image>
+        <text>医院</text>
+      </view>
+      <view class="info">#汽车站 #高铁站 #机场</view>
+      <view class="rb_bg"></view>
+    </view>
+    <view class="item item-3">
+      <view class="name">
+        <image src="../../static/img/icon_tel_xz.png" mode="widthFix"></image>
+        <text>行政单位</text>
+      </view>
+      <view class="info">#汽车站 #高铁站 #机场</view>
+      <view class="rb_bg"></view>
+    </view>
+    <view class="item item-4">
+      <view class="name">
+        <image src="../../static/img/icon_tel_yh.png" mode="widthFix"></image>
+        <text>银行金融</text>
+      </view>
+      <view class="info">#汽车站 #高铁站 #机场</view>
+      <view class="rb_bg"></view>
+    </view>
+    <view class="item item-5">
+      <view class="name">
+        <image src="../../static/img/icon_tel_bd.png" mode="widthFix"></image>
+        <text>本地服务</text>
+      </view>
+      <view class="info">#汽车站 #高铁站 #机场</view>
+      <view class="rb_bg"></view>
+    </view>
+    <view class="item  item-6">
+      <view class="name">
+        <image src="../../static/img/icon_tel_ly.png" mode="widthFix"></image>
+        <text>旅游景点</text>
+      </view>
+      <view class="info">#汽车站 #高铁站 #机场</view>
+      <view class="rb_bg"></view>
+    </view>
+  </view>
+</view>

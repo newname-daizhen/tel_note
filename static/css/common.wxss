@@ -1,0 +1,79 @@
+
+image {
+  display: block;
+  max-width: 100%;
+}
+
+.bg_gray {
+  min-height: 100vh;
+  background-color: #F6F6F6;
+}
+
+.dn{
+  display: none;
+}
+
+.line_20{
+  height: 20rpx;
+  background-color: #F2F2F3;
+}
+
+.clearfix{
+  zoom: 1;
+}
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+
+.list_tel {
+  background-color: #FFF;
+}
+
+.list_tel .item {
+  margin-left: 32rpx;
+  padding: 32rpx 32rpx 32rpx 0;
+  border-bottom: 1rpx solid #F1F1F2;
+}
+
+.list_tel .item:last-child {
+  border-bottom: unset;
+}
+.list_tel .item navigator{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list_tel .item .name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #222;
+  line-height: 45rpx;
+}
+
+.list_tel .item .address {
+  margin-top: 4rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 37rpx;
+}
+
+.list_tel .item .telnum {
+  display: flex;
+  align-items: center;
+}
+
+.list_tel .item .num {
+  font-size: 36rpx;
+  color: #3574FA;
+  line-height: 43rpx;
+}
+
+.list_tel .item .btn_call {
+  margin-left: 16rpx;
+  width: 44rpx;
+}
