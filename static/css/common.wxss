@@ -9,6 +9,11 @@ image {
   background-color: #F6F6F6;
 }
 
+.bg_gray_one {
+  min-height: 100vh;
+  background-color: #F0F2F5;
+}
+
 .dn{
   display: none;
 }
@@ -37,6 +42,9 @@ image {
   margin-left: 32rpx;
   padding: 32rpx 32rpx 32rpx 0;
   border-bottom: 1rpx solid #F1F1F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .list_tel .item:last-child {
@@ -76,4 +84,55 @@ image {
 .list_tel .item .btn_call {
   margin-left: 16rpx;
   width: 44rpx;
+}
+
+
+.data_null {
+  margin: 0 auto;
+  padding: 60rpx 0;
+  width: 440rpx;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+}
+.data_null image{
+  margin: 0 auto 40rpx;
+  width: 418rpx;
+}
+
+.mask_delete{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 51, 51, .3);
+  display: none;
+}
+.mask_delete.mask_show{
+  display: block;
+}
+
+.mask_delete .box{
+  display: block;
+  margin: 30vh auto 0;
+  padding: 50rpx 32rpx 40rpx;
+  width: 50%;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 10rpx;
+  box-sizing: border-box;
+} 
+
+.mask_delete .box .btn{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #666;
+  border: 1rpx solid #999;
+  border-radius: 3rpx;
+}
+.mask_delete .box .btn_1{
+  color: #DF2341;
+  margin-bottom: 30rpx;
 }

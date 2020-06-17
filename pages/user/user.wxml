@@ -26,8 +26,10 @@
       <text>收藏</text>
     </view>
     <view class="item">
-      <image src="../../static/img/icon_user_history.png" mode="widthFix"></image>
-      <text>查询记录</text>
+      <navigator url="../note/note" hover-class="none">
+        <image src="../../static/img/icon_user_history.png" mode="widthFix"></image>
+        <text>查询记录</text>
+      </navigator>
     </view>
     <view class="item">
       <image src="../../static/img/icon_user_edit.png" mode="widthFix"></image>

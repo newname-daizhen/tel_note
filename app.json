@@ -5,7 +5,9 @@
     "pages/user/user",
     "pages/search/search",
     "pages/detail/detail",
-    "pages/type/type"
+    "pages/type/type",
+    "pages/note/note",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",

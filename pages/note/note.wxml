@@ -1,0 +1,17 @@
+<!--pages/note/note.wxml-->
+<view class="nore bg_gray_one">
+  <view class="list_note">
+    <view class="item">
+      <view class="name">合肥环保中心</view>
+      <view class="time">2018.21.11 13</view>
+    </view>
+    <view class="item">
+      <view class="name">合肥环保中心</view>
+      <view class="time">2018.21.11 13</view>
+    </view>
+    <view class="item">
+      <view class="name">合肥环保中心</view>
+      <view class="time">2018.21.11 13</view>
+    </view>
+  </view>
+</view>

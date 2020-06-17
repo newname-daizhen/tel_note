@@ -1,5 +1,5 @@
 <!--pages/search/search.wxml-->
-<view class="search">
+<view class="search bg_gray">
   <view class="wrap_input">
     <view class="input_block">
       <image class="icon_search" src="../../static/img/icon_search.png" mode="widthFix"></image>
@@ -57,7 +57,8 @@
       </view>
     </view>
     <view class="data_null" wx:else>
-      暂无数据~
+      <image src="../../static/img/null.png" mode="widthFix"></image>
+      <text>暂无数据~</text>
     </view>
   </view>
 </view>

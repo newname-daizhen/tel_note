@@ -1,0 +1,18 @@
+/* pages/note/note.wxss */
+
+.list_note .item{
+  padding: 33rpx 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #7B7B7B;
+  font-size: 28rpx;
+}
+.list_note .item .name{
+  color: #080808;
+  font-size: 32rpx;
+  max-width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

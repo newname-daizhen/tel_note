@@ -2,6 +2,7 @@
 
 .search {
   min-height: 100vh;
+  overflow: hidden;
   background-color: rgba(153, 153, 153, 0.2);
 }
 
@@ -99,9 +100,3 @@
   line-height: 50rpx;
 }
 
-
-.data_null {
-  padding: 100rpx 0 0;
-  text-align: center;
-  color: #999;
-}

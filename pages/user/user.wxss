@@ -97,6 +97,13 @@
   line-height: 100rpx;
   border-bottom: 1rpx solid #DDDFE4;
 }
+
+.list_func .item navigator{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 .list_func .item:last-child{
   border-bottom: unset;
 }
