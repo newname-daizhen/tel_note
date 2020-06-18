@@ -1,17 +1,16 @@
 <!--pages/note/note.wxml-->
 <view class="nore bg_gray_one">
   <view class="list_note">
-    <view class="item">
-      <view class="name">合肥环保中心</view>
-      <view class="time">2018.21.11 13</view>
-    </view>
-    <view class="item">
-      <view class="name">合肥环保中心</view>
-      <view class="time">2018.21.11 13</view>
-    </view>
-    <view class="item">
-      <view class="name">合肥环保中心</view>
-      <view class="time">2018.21.11 13</view>
-    </view>
+    <scroll-view class="scroll_y" scroll-y="{{isScroll}}">
+      <block wx:key="item" wx:for="{{noteData}}">
+        <view class="item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" data-index='{{index}}' data-id="{{item.id}}" style="right:{{item.rightNum}}rpx">
+          <view class="visible_wrap" data-url="{{item.urls}}" bindtap="navTo">
+            <view class="name">{{item.name}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+          <view class="remove" data-id="{{item.id}}" bindtap="delItem">清除</view>
+        </view>
+      </block>
+    </scroll-view>
   </view>
 </view>

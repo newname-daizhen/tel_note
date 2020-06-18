@@ -1,18 +1,52 @@
 /* pages/note/note.wxss */
 
-.list_note .item{
-  padding: 33rpx 32rpx;
+.list_note {
+  background-color: #FFF;
+}
+.list_note .item {
+  position: relative;
+  margin-left: 32rpx;
+  padding: 33rpx 32rpx 33rpx 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #7B7B7B;
   font-size: 28rpx;
+  background-color: #FFF;
+  border-bottom: 1rpx solid #EDEDED;
 }
-.list_note .item .name{
+
+.list_note .item:last-child {
+  border-bottom: unset;
+}
+
+.list_note .item .name {
   color: #080808;
   font-size: 32rpx;
   max-width: 60%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.visible_wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove {
+  width: 160rpx;
+  height: 100%;
+  background-color: #FF4E4E;
+  color: white;
+  font-size: 36rpx;
+  position: absolute;
+  top: 0;
+  right: -160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

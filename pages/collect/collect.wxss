@@ -1,1 +1,28 @@
 /* pages/collect/collect.wxss */
+
+.scroll_y{
+  position: relative;
+}
+.list_tel .item{
+  position: relative;
+}
+.visible_wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: #FF4E4E; 
+  color: white; 
+  font-size: 36rpx;
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 

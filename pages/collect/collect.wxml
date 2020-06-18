@@ -1,23 +1,28 @@
 <!--pages/collect/collect.wxml-->
 <view class="collect bg_gray_one">
   <view class="list_tel">
-    <view class="item" wx:for="{{resultData}}" wx:key="id"  bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd" bindlongtap="bindLongDelete" bindtap="navTo" data-id="{{item.id}}" data-url="{{item.urls}}">
-      <block>
-        <view class="msg">
-          <view class="name">{{item.title}}</view>
-          <view class="address">{{item.address}}</view>
-        </view>
-        <view class="telnum">
-          <view class="num">{{item.phone}}</view>
-          <image class="btn_call" src="../../static/img/icon_call.png" mode="widthFix"></image>
+    <scroll-view class="scroll_y" scroll-y="{{isScroll}}">
+      <block wx:key="item" wx:for="{{resultData}}">
+        <view class="item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" data-index='{{index}}' data-id="{{item.id}}" style="right:{{item.rightNum}}rpx">
+          <view class="visible_wrap" data-url="{{item.urls}}" bindtap="navTo">
+            <view class="msg">
+              <view class="name">{{item.title}}</view>
+              <view class="address">{{item.address}}</view>
+            </view>
+            <view class="telnum">
+              <view class="num">{{item.phone}}</view>
+              <image class="btn_call" src="../../static/img/icon_call.png" mode="widthFix"></image>
+            </view>
+          </view>
+          <view class="remove" data-id="{{item.id}}" bindtap="delItem">删除 </view>
         </view>
       </block>
-    </view>
+    </scroll-view>
   </view>
-  <view class="mask_delete {{maskShow ? 'mask_show':''}}">
+  <!-- <view class="mask_delete {{maskShow ? 'mask_show':''}}">
    <view class="box">
       <view class="btn btn_1" bindtap="itemDelete">删除</view>
       <view class="btn btn_2" bindtap="closeDelete">取消</view>
    </view>
-  </view>
+  </view> -->
 </view>

@@ -11,37 +11,36 @@ Page({
         title: '合肥环保中心',
         address: '望江西路519号',
         phone: "0551 284 4810",
-        urls:"../detail/detail"
+        urls:"../detail/detail",
+        rightNum: 0
       },{
         id: 1,
         title: '合肥环保中心',
         address: '望江东路519号',
         phone: "0551 384 4810",
-        urls:"../detail/detail"
+        urls:"../detail/detail",
+        rightNum: 0
       },{
         id: 2,
         title: '合肥环保中心',
         address: '望江东路119号',
         phone: "0551 384 8463",
-        urls:"../detail/detail"
+        urls:"../detail/detail",
+        rightNum: 0
       },{
         id: 3,
         title: '合肥环保中心',
         address: '望江东路119号',
         phone: "0551 384 8463",
-        urls:"../detail/detail"
+        urls:"../detail/detail",
+        rightNum: 0
       }
     ],
     maskShow: false,
     deleteId: null,
-    // 触摸开始时间
-    touchStartTime: 0,
-    // 触摸结束时间
-    touchEndTime: 0,  
-    // 最后一次单击事件点击发生时间
-    lastTapTime: 0, 
-    // 单击事件点击后要触发的函数
-    lastTapTimeoutFunc: null
+    delBtnWidth:160,
+    isScroll:true,
+    windowHeight:0,
   },
 
   /**
@@ -50,52 +49,70 @@ Page({
   onLoad: function (options) {
 
   },
-  /// 按钮触摸开始触发的事件
-  bindTouchStart:function(e) {
-    this.setData({
-      touchStartTime: e.timeStamp
-    })
-  },
-  /// 按钮触摸结束触发的事件
-  bindTouchEnd:function(e) {
-    this.setData({
-      touchEndTime: e.timeStamp
-    })
-  },
-  // 长按
-  bindLongDelete:function(e){
-    let idx = e.currentTarget.dataset.id;
-    console.log("准备删除收藏id为"+idx);
-    this.setData({
-      maskShow: true,
-      deleteId: idx
-    })
-  },
-  // 删除收藏
-  itemDelete:function(){
+  drawStart: function (e) {
+    // console.log("drawStart"); 
     var that = this;
-    console.log("删除收藏id"+that.data.deleteId);
-    this.setData({
-      maskShow: false
+    var touch = e.touches[0]
+    for(var index in that.data.resultData) {
+      var item = that.data.resultData[index]
+      item.rightNum = 0
+    }
+    that.setData({
+      resultData: that.data.resultData,
+      startX: touch.clientX,
     })
   },
-  // 取消删除
-  closeDelete:function(){
-    this.setData({
-      maskShow: false
-    })
-  },
-  // 点击
-  navTo:function(e){
-    var that = this
-    let urls = e.currentTarget.dataset.url;
-    // 控制点击事件在350ms内触发，为了防止长按时会触发点击事件
-    if (that.data.touchEndTime - that.data.touchStartTime < 350) {
-      wx.navigateTo({
-        url: urls,
+  drawMove: function (e) {
+    var touch = e.touches[0]
+    var item = this.data.resultData[e.currentTarget.dataset.index]
+    var disX = this.data.startX - touch.clientX
+    if (disX >= 20) {
+      if (disX > this.data.delBtnWidth) {
+        disX = this.data.delBtnWidth
+      }
+      item.rightNum = disX
+      this.setData({
+        isScroll: false,
+        resultData: this.data.resultData
+      })
+    } else {
+      item.rightNum = 0
+      this.setData({
+        isScroll: true,
+        resultData: this.data.resultData
       })
     }
-   
+  },  
+  drawEnd: function (e) {
+    var item = this.data.resultData[e.currentTarget.dataset.index]
+    if (item.rightNum >= this.data.delBtnWidth/2) {
+      item.rightNum = this.data.delBtnWidth
+      this.setData({
+        isScroll: true,
+        resultData: this.data.resultData,
+      })
+    } else {
+      item.rightNum = 0
+      this.setData({
+        isScroll: true,
+        resultData: this.data.resultData,
+      })
+    }
+  },
+  // 删除收藏
+  delItem:function(e){
+    var that = this;
+    console.log("删除收藏id"+e.currentTarget.dataset.id);
+  },
+  
+  // 点击
+  navTo:function(e){
+    var that = this;
+    console.log("点击")
+    let urls = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: urls,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
