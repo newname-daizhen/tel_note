@@ -2,10 +2,10 @@
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据true
    */
   data: {
-      loginNo: false //是否登录 false为登录、true为未登录
+      loginNo: true //是否登录 false为登录、true为未登录
   },
 
   /**
