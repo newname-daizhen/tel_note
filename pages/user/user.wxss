@@ -66,8 +66,6 @@
   width:298rpx;
   height:88rpx;
   line-height:88rpx;
-  border-radius:6rpx;
-  border:1px solid rgba(53,116,250,1);
 }
 .btn_login .btn{
   display: flex;
@@ -77,6 +75,13 @@
   height: 88rpx;
   color:rgba(53,116,250,1);
   background-color: #FFF;
+  font-weight: normal;
+  border-radius:6rpx;
+  border:1px solid rgba(53,116,250,1);
+  outline: none;
+}
+.btn_login .btn::after{
+  border: none;  
 }
 .btn_login image{
   margin-right: 8rpx;
