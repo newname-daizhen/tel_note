@@ -20,7 +20,7 @@
         <image class="icon_call" src="../../static/img/icon_call_white.png" mode="widthFix"></image>
         <text>立即呼叫</text>
       </view>
-      <view class="btn">
+      <view class="btn {{collected ? 'active' : ''}}">
         <text>收藏到个人</text>
       </view>
     </view>

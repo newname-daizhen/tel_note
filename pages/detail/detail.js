@@ -9,7 +9,8 @@ Page({
       name:"合肥社保中心",
       tel:"0551 2834 192",
       address:"政务环路33号"
-    }
+    },
+    collected: true
   },
   copyText: function (e) {
     console.log(e)
